@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import authService from "./appwrite/auth";
 import { login, logout } from "./store/authSlice";
-import { Header } from "./components";
+import {Header } from "./components";
+import {Footer} from "./components";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -27,7 +29,8 @@ function App() {
 <div>
   <Header/>
   <main>
-    
+    <Outlet/>
+
   </main>
   <Footer/>
 </div>
